@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  lang =" pt-BR " >
+    <head>
+    <meta  charset =" UTF-8 " >
+    <meta  name =" viewport " content =" largura = largura do dispositivo, escala inicial = 1,0 ">
+    <title> DETRAN - SENAI </title>​​
+    </head>
+    
+<body>
+    <h1> Sistema de Multas </h1>
+    <span> Velocidade do carro </span>
+     <input type="text" número nome =" txtvel " id =" txtvel " >
+     <span> Km/h </span>
+     <input  type =" botão " valor =" Verificar " onclick =" calcular() " >
+        <div  id =" res " > </div >
+
+    <script>​​
+
+        function {
+            var  txtv  =  documento . querySelector ('input#txtvel')
+            var  res  =  documento . querySelector ('div#res')
+            var  vel  =  Número (txtv.valor)​​
+            res . innerHTML  =  `A sua velocidade atual é de <strong> ${ vel } </strong> Km/h`
+
+
+            if  ( nível  > 80 ) {
+                res . innerHTML  +=  '<p>Você foi <strong>MULTADO!</strong> Por excesso de velocidade!</p>'
+            }
+
+            else  {
+                res . innerHTML  +=  '<p><strong>Parabéns!</strong> Você está na velocidade de segurança!</p>'
+                res . innerHTML  +=  '<p>Dirija sempre com o cinto de segurança!</p>'
+            }
+        }
+
+    </script>​​
+
+
+</corpo >
+</html>
