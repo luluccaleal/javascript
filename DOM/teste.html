@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Javascript</title>
+    <style>
+        body{   /*comandos iguais ao css*/
+            background-color: blue;
+            color: yellowgreen;
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Entendendo o DOM</h1>
+        <p>Postando aqui os resultados</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript </p>
+    <div id="msg">Estou aguardando...</div>
+
+ <script>
+   
+    //window.document.write('Veja o poder do DOM') // Exibe o texto no html
+    //window.document.write(window.document.charset) // Mostra o Mapa dos Caracteres
+    //window.document.write(window.document.URL) // Exibe o endereço do Site
+    
+    //var p1 = window.document.getElementsByTagName('p')[1] //0 é o primeiro paragrafo e 1 é o segundo
+    //window.document.write('Esse é o texto: ' + p1.innerHTML)
+    //p1.style.background = 'black' // troca a cor do fundo do site
+    
+    //var corpo = window.document.body
+    //corpo.style.background = 'black'
+    
+    //window.alert(p1.innerHTML) // nao funciona as tags html, aparece como texto
+
+    //var p1 = window.document.getElementsByTagName('p')[1] 
+    //window.alert(p1.innerText) //retorna somente o texto
+ 
+    //var d = window.document.getElementById('msg')
+    
+    //var d = window.document.getElementsByName('msg')[0]
+    //d.style.background = 'SlateGray'
+    //d.style.color = 'black'
+    //d.innerText = 'Estou aguardando...'
+
+    //var d = window.document.getElementsByClassName('msg')[0]
+    //d.style.background = 'SlateGray'
+    //d.style.color = 'black'
+    //d.innerText = 'Estou aguardando...'
+
+    var d = window.document.querySelector('div#msg')
+    d.style.backgroundColor = 'white'
+
+ </script>
+</body>
+
+</html>

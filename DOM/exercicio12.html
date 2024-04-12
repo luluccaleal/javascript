@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+        input{
+            font: normal 18pt Arial;  
+            width: 285px;
+            margin-bottom: 5px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <span>n1</span>
+    <input type="number" name = 'txtn1' id = 'txtn1'>
+    
+    <br>
+
+    <input type="button" value = "Calcular Quadrado" onclick="quadrado()">
+    <br>
+    <input type="button" value = "Calcular Cubo" onclick="cubo()">
+    <br>
+    <input type="button" value = "Calcular Raiz Quadrada" onclick="raiz()">
+    <br>
+    <br>
+
+    <span>n2</span>
+    <input type="number" name = 'txtn2' id = 'txtn2'>
+    <br>
+    <input type="button" value = "somar" onclick="somar()">
+    <input type="button" value = "subtrair" onclick="subtrair()">
+    <br>
+    <input type="button" value = "multiplicar" onclick="multiplicar()">
+    <input type="button" value = "dividir" onclick="dividir()">
+    <div id="res">Resultado -></div>
+    <script>
+        var n1
+        var n2
+
+        function quadrado(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn1').value)
+            var q = n1*n2 
+            var res = window.document.getElementById ('res')
+            res.innerHTML = ` ${n1} * ${n2} é igual a: <strong>${q}<strong>`
+        }
+
+        function cubo(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn1').value)
+            var c = n1 ** 3
+            var res = window.document.getElementById ('res')
+            res.innerHTML = `${n1} ao cubo é igual a: <strong>${c}<strong>`
+        }
+
+        function raiz(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn2').value)
+            var r = Math.sqrt(n1)
+            var res = window.document.getElementById ('res')
+            res.innerHTML = ` √${n1} é igual a: <strong>${r}<strong>`
+        }
+
+        function somar(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn1').value)
+            var s = n1+n2
+            var res = window.document.getElementById ('res')
+            res.innerHTML = ` ${n1}+${n2} é igual a: <strong>${s}<strong>`
+        }
+
+        function subtrair(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn2').value)
+            var s = n1-n2
+            var res = window.document.getElementById ('res')
+            res.innerHTML = ` ${n1}-${n2} é igual a: <strong>${s}<strong>`
+        }
+
+        function multiplicar(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn2').value)
+            var m = n1*n2
+            var res = window.document.getElementById ('res')
+            res.innerHTML = ` ${n1}*${n2} é igual a: <strong>${m}<strong>`
+        }
+
+        function dividir(){
+            var n1 = Number(document.getElementById ('txtn1').value)
+            var n2 = Number(document.getElementById ('txtn2').value)
+            var d = n1/n2
+            var res = window.document.getElementById ('res')
+            res.innerHTML = ` ${n1}/${n2} é igual a: <strong>${d}<strong>`
+        }
+    </script>
+</body>
+</html>
